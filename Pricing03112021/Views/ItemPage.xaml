@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pricing03112021.Views.ItemPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Custom" Clicked="OnButtonClicked"/>
+            <SearchBar x:Name="searchBar"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="CenterAndExpand"
+                   Placeholder="Search items...."
+                   CancelButtonColor="Orange"
+                   PlaceholderColor="Orange"
+                   TextTransform="Lowercase"
+                   HorizontalTextAlignment="Start"
+                   TextChanged="OnTextChanged"/>
+            <CollectionView x:Name="productList" 
+                        SelectionMode="Single"
+                        SelectionChanged="Items_SelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="3*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.RowSpan="2" Text="{Binding ItemCode}"/>
+                            <Label Grid.Column="1" Text="{Binding ItemDescription}" FontAttributes="Bold"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

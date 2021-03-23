@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pricing03112021.Views.SheetEntryPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="columnBinding" HorizontalOptions="Center"/>
+            <Label x:Name="itemBinding" HorizontalOptions="Center"/>
+            <Entry x:Name="pageQuantity" Placeholder="Quantity" PlaceholderColor="Red" Keyboard="Numeric" Completed="Entry_Completed"/>
+            <Label x:Name="testingBinding1"/>
+            <Button x:Name="copyClicked" Text="Copy to Clipboard" IsVisible="False" Clicked="CopyClick"/>
+            <Button x:Name="emailClicked" Text="Email" IsVisible="False" Clicked="EmailClick"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

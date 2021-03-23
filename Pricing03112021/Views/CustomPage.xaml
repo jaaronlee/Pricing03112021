@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pricing03112021.Views.CustomPage">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Picker Grid.Column="4" x:Name="pickerMaterial" Grid.Row="2" ItemsSource="{Binding pickerMaterial}" SelectedIndexChanged="MaterialPicked"/>
+            <Picker Grid.Column="4" x:Name="pickerColor" Grid.Row="2" ItemsSource="{Binding pickerColor}" IsVisible="False"/>
+            <Picker Grid.Column="4" x:Name="pickerSurface" Grid.Row="2" ItemsSource="{Binding pickerSurface}" IsVisible="False"/>
+            <Entry x:Name="pageGauge" Placeholder="Gauge" PlaceholderColor="Red" Keyboard="Numeric" IsVisible="False" Completed="Gauge_Completed"/>
+            <Entry x:Name="pageWidth" Placeholder="Width" PlaceholderColor="Red" Keyboard="Numeric" IsVisible="False" Completed="Width_Completed"/>
+            <Entry x:Name="pageLength" Placeholder="Length" PlaceholderColor="Red" Keyboard="Numeric" IsVisible="False" Completed="Length_Completed"/>
+            <Entry x:Name="pageSheets" Placeholder="Sheets" PlaceholderColor="Red" Keyboard="Numeric" IsVisible="False" Completed="Entry_Completed"/>
+            <Label x:Name="warningLabel" TextColor="Red" Text="Error" IsVisible="False"/>
+            <Button x:Name="copyClicked" Text="Copy to Clipboard" IsVisible="False" Clicked="CopyClick"/>
+            <Button x:Name="emailClicked" Text="Email" IsVisible="False" Clicked="EmailClick"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+<!---->
